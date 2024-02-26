@@ -2,7 +2,7 @@ package cl.asm.jftest.car;
 
 public class Account {
 
-    String accountNumber;
-    static int numberOfAccounts = 0;
+    public String accountNumber;
+    public static int numberOfAccounts = 0;
 
 }

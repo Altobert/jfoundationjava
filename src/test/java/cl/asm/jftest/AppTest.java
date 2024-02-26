@@ -6,6 +6,7 @@ import java.util.logging.Logger;
 
 import org.junit.Test;
 
+import cl.asm.jftest.car.Account;
 import cl.asm.jftest.car.Car;
 import cl.asm.jftest.car.Dealership;
 import cl.asm.jftest.car.Fan;
@@ -42,6 +43,27 @@ public class AppTest
         double interest = FinancialFunctions.computeSimpleInterest(1, 10, 1);
         Logger.getGlobal().info("Interest: " + interest);
 
+        assertTrue( true );
+    }
+
+    @Test
+    public void testAccount()
+    {
+        Account account = new Account();
+        account.accountNumber="01";
+
+        Account.numberOfAccounts = Account.numberOfAccounts + 1;
+
+        Logger.getGlobal().info("Numero de cuenta: " + account.accountNumber);
+        Logger.getGlobal().info("Numero cuenta creada: " + Account.numberOfAccounts);
+
+        Account account2 = new Account();
+        account2.accountNumber="02";
+        Account.numberOfAccounts = Account.numberOfAccounts + 1;
+
+
+        Logger.getGlobal().info("Numero de cuenta: " + account2.accountNumber);
+        Logger.getGlobal().info("Numero cuenta creada: " + Account.numberOfAccounts);
         assertTrue( true );
     }
 }
