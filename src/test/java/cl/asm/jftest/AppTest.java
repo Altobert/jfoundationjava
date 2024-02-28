@@ -61,9 +61,21 @@ public class AppTest
         account2.accountNumber="02";
         Account.numberOfAccounts = Account.numberOfAccounts + 1;
 
-
         Logger.getGlobal().info("Numero de cuenta: " + account2.accountNumber);
         Logger.getGlobal().info("Numero cuenta creada: " + Account.numberOfAccounts);
+        assertTrue( true );
+    }
+
+    @Test
+    public void testStudent(){
+        //instanciamos un objeto de la clase Student
+        //FQCN: cl.asm.jftest.student.Student
+        cl.asm.jftest.student.Student student = new cl.asm.jftest.student.Student("01");
+        System.out.println(student.toString());
+        cl.asm.jftest.student.Student student2 = new cl.asm.jftest.student.Student("02");
+        System.out.println(student2.toString());
+        cl.asm.jftest.student.Student student3 = new cl.asm.jftest.student.Student("03");
+        System.out.println(student3.toString());
         assertTrue( true );
     }
 }
