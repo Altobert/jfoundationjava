@@ -6,6 +6,7 @@ import java.util.logging.Logger;
 
 import org.junit.Test;
 
+import cl.asm.jftest.assest.zo829.TestPrincipal;
 import cl.asm.jftest.car.Account;
 import cl.asm.jftest.car.Car;
 import cl.asm.jftest.car.Dealership;
@@ -76,6 +77,14 @@ public class AppTest
         System.out.println(student2.toString());
         cl.asm.jftest.student.Student student3 = new cl.asm.jftest.student.Student("03");
         System.out.println(student3.toString());
+        assertTrue( true );
+    }
+
+    @Test
+    public void testPrincipal(){
+        Logger.getGlobal().info("TestPrincipal.test()");
+        TestPrincipal testPrincipal = new TestPrincipal();
+        testPrincipal.test();
         assertTrue( true );
     }
 }
